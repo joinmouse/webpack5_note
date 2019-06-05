@@ -1,3 +1,6 @@
+
+// import '@babel/polyfill'
+
 /**
  * webpack 支持 ES6、CommonJs 和 AMD 规范
  */
