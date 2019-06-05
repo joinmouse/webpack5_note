@@ -5,12 +5,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     // 需要打包的文件入口
     entry: {
-        app: './app.js' 
+        app: './src/index.js' 
     },
     output: {
         publicPath: __dirname + '/dist/',  // js 引用的路径或者 CDN 地址
         path: path.resolve(__dirname, 'dist'), // 打包文件的输出目录
-        filename: 'bundle.js' // 打包后生产的 js 文件
+        filename: '[name].bundle.js', // 打包后生产的 js 文件
+        chunkFilename: '[name].js' // 代码拆分后的文件名
     },
     module: {
         rules: [
