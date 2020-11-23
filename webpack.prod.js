@@ -2,7 +2,7 @@
 
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -59,10 +59,8 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name]_[contenthash:8].css'
         }),
-        new OptimizeCssAssetsWebpackPlugin({
-            assetNameRegExp: /\.css$/g,
-            cssProcessor: require('cssnano')
-        }),
+        // 压缩css
+        new CssMinimizerWebpackPlugin(),
         // index.html
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
