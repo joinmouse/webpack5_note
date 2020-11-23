@@ -6,7 +6,7 @@ import x from './images/x.jpg'
 function Search() {
     return (
         <div className="serach-text">
-            Search Text....React JSX 111222
+            Search Text....React JSX 111222333
             <img alt="x" src={x} />
         </div>
     )

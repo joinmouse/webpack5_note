@@ -40,6 +40,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
+                            name: '[name][hash:8].[ext]',
                             limit: 10240   //小于10kb自动转为base64
                         }
                     }
@@ -51,9 +52,9 @@ module.exports = {
             }
         ]
     },
-    // plugins: [
-    //     new webpack.HotModuleReplacementPlugin()
-    // ],
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     devServer: {
         contentBase: './dist'
     }
