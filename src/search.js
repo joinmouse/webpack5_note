@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './search.css'
 
 function Search() {
     return (
-        <div>Search Text</div>
+        <div className="serach-text">Search Text....React</div>
     )
 }
 
