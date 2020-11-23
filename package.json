@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "webpack"
+        "build": "webpack",
+        "watch": "webpack --watch"
     },
     "repository": {
         "type": "git",
@@ -17,13 +18,16 @@
         "url": "https://github.com/joinmouse/webpack5_study/issues"
     },
     "homepage": "https://github.com/joinmouse/webpack5_study#readme",
-    "dependencies": {},
+    "dependencies": {
+        "url-loader": "^4.1.1"
+    },
     "devDependencies": {
         "@babel/core": "^7.12.7",
         "@babel/preset-env": "^7.12.7",
         "@babel/preset-react": "^7.12.7",
         "babel-loader": "^8.2.1",
         "css-loader": "^5.0.1",
+        "file-loader": "^6.2.0",
         "less": "^3.12.2",
         "less-loader": "^7.1.0",
         "react": "^17.0.1",
